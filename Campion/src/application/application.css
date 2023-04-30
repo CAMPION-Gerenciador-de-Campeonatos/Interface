@@ -1,1 +1,13 @@
-/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.root{
+	-fx-background-color:"DimGrey";
+}
+.ImageView{
+	-fx-background-color:"DimGrey";	
+}
+.label{
+	-fx-text-fill: "black";
+}
+
+.menu-item {
+    -fx-text-fill: "Black";
+}

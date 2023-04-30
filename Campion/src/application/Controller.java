@@ -1,5 +1,9 @@
 package application;
 import java.io.IOException;
+import java.time.DateTimeException;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -10,6 +14,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -34,6 +39,14 @@ public class Controller {
     @FXML
     private TextField cad_email;
     @FXML
+    private TextField cad_fnome;
+    @FXML
+    private TextField cad_lnome;
+    @FXML
+    private TextField cad_telefone;
+    @FXML
+    private DatePicker cad_data;
+    @FXML
     private Button avancar_cad2;
     @FXML
     private Label auxUser;
@@ -41,6 +54,14 @@ public class Controller {
     private Label auxSenha;
     @FXML
     private Label auxEmail;
+    @FXML
+    private Label auxPnome;
+    @FXML
+    private Label auxLnome;
+    @FXML
+    private Label auxData;
+    @FXML
+    private Label auxTelefone;
     
     public void login(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("Main.fxml"));
@@ -60,9 +81,7 @@ public class Controller {
         stage.show();
     }
     
-    String usuario, senha;
     public void cadastrar_etapa2(ActionEvent event) throws IOException {
-
         String usuario = cad_user.getText();
         String senha = cad_senha.getText();
         String email = cad_email.getText();
@@ -120,27 +139,83 @@ public class Controller {
 
     public void entrar(ActionEvent event) {
     	Alert aviso = new Alert(AlertType.CONFIRMATION);
-    	aviso.setTitle("Champion");
-    	aviso.setHeaderText("Deseja entrar no Champion?");
+    	aviso.setTitle("Campion");
+    	aviso.setHeaderText("Deseja entrar no Campion?");
     	
     	if(aviso.showAndWait().get() == ButtonType.OK) {
         	stage = (Stage) scenePane.getScene().getWindow();
-        	System.out.println("Você entrou no Champion!");
+        	System.out.println("Você entrou no Campion!");
         	stage.close();
     	}
     }
-
+    
     public void cadastrou(ActionEvent event) {
-    	Alert aviso = new Alert(AlertType.CONFIRMATION);
-    	aviso.setTitle("Champion");
-    	aviso.setHeaderText("Deseja finalizar seu cadastro?");
-    	aviso.setContentText("Informações prestadas corretas");
-    	
-    	if(aviso.showAndWait().get() == ButtonType.OK) {
-        	stage = (Stage) scenePane.getScene().getWindow();
-        	System.out.println("Você cadastrou-se no Champion!");
-        	stage.close();
-    	}
+
+        String Fnome = cad_fnome.getText();
+        String Lnome = cad_lnome.getText();
+        LocalDate data = cad_data.getValue();
+        String Telefone = cad_telefone.getText();
+
+        //Verificação de Primeiro nome
+        if (Fnome.length() == 0) {
+            auxPnome.setText("Primeiro nome inválido");
+            auxPnome.setVisible(true);
+        } else {
+            auxPnome.setVisible(false);
+        }
+        //Verificação de Último nome
+        if (Lnome.length() == 0) {
+            auxLnome.setText("Último nome inválido");
+            auxLnome.setVisible(true);
+        } else {
+            auxLnome.setVisible(false);
+        }
+
+        //Verificação de idade
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        try {
+            if (data == null) {
+                throw new DateTimeException("Data não informada");
+            }
+            LocalDate now = LocalDate.now();
+            long diff = ChronoUnit.YEARS.between(data, now);
+            if (diff < 18) {
+                auxData.setText("Você deve ter mais de 18 anos para se cadastrar");
+                auxData.setVisible(true);
+            } else {
+                data.format(formatter);
+                auxData.setVisible(false);
+            }
+        } catch (DateTimeException e) {
+            auxData.setText("Data inválida");
+            auxData.setVisible(true);
+        }
+
+        //Verificação de telefone
+        if (!Telefone.matches("\\(\\d{2}\\) \\d{5}-\\d{4}")) {
+            auxTelefone.setText("Telefone inválido (DD) 12345-6789");
+            auxTelefone.setVisible(true);
+        } else {
+            auxTelefone.setVisible(false);
+        }
+
+        if(!auxPnome.isVisible() && !auxLnome.isVisible() && !auxData.isVisible() && !auxTelefone.isVisible()) {
+        	System.out.println("Primeiro nome: "+Fnome);
+            System.out.println("Segundo nome: "+Lnome);
+            System.out.println("Data de nascimento: "+data);
+            System.out.println("Telefone: "+Telefone);
+        	
+        	Alert aviso = new Alert(AlertType.CONFIRMATION);
+            aviso.setTitle("Champion");
+            aviso.setHeaderText("Deseja finalizar seu cadastro?");
+            aviso.setContentText("Informações prestadas corretas");
+
+            if(aviso.showAndWait().get() == ButtonType.OK) {
+                stage = (Stage) scenePane.getScene().getWindow();
+                System.out.println("Você cadastrou-se no Campion!");
+                stage.close();
+            }
+        }
     }
 }
 

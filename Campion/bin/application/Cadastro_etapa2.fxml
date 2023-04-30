@@ -12,9 +12,9 @@
 
 <AnchorPane fx:id="scenePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
    <children>
-      <Label layoutX="66.0" layoutY="108.0" text="Primeiro nome" />
-      <TextField layoutX="66.0" layoutY="124.0" prefHeight="26.0" prefWidth="236.0" />
-      <Label layoutX="66.0" layoutY="158.0" text="Data de nascimento" />
+      <Label layoutX="60.0" layoutY="90.0" text="Primeiro nome" />
+      <TextField fx:id="cad_fnome" layoutX="60.0" layoutY="106.0" prefHeight="26.0" prefWidth="236.0" />
+      <Label layoutX="60.0" layoutY="141.0" text="Data de nascimento" />
       <Label layoutX="250.0" layoutY="264.0" text="Passo 2 de 2" />
       <Hyperlink contentDisplay="RIGHT" layoutX="234.0" layoutY="280.0" onAction="#login" prefHeight="24.0" prefWidth="95.0" text="Entrar" />
       <Label layoutX="68.0" layoutY="284.0" text="Já é usuário da Campion?" />
@@ -29,12 +29,16 @@
          </image>
       </ImageView>
       <Button fx:id="cadastro_button" layoutX="430.0" layoutY="312.0" mnemonicParsing="false" onAction="#cadastrou" prefHeight="26.0" prefWidth="124.0" text="Cadastrar-se" />
-      <Label layoutX="66.0" layoutY="214.0" text="Número de telefone" />
-      <TextField layoutX="144.0" layoutY="236.0" prefHeight="26.0" prefWidth="313.0" promptText="ex: (88)9876-54321" />
-      <Label layoutX="312.0" layoutY="108.0" text="Último nome" />
-      <TextField layoutX="312.0" layoutY="124.0" prefHeight="26.0" prefWidth="236.0" />
+      <Label layoutX="60.0" layoutY="200.0" text="Número de telefone" />
+      <TextField fx:id="cad_telefone" layoutX="138.0" layoutY="222.0" prefHeight="26.0" prefWidth="313.0" promptText="ex: (88)9876-54321" />
+      <Label layoutX="306.0" layoutY="90.0" text="Último nome" />
+      <TextField fx:id="cad_lnome" layoutX="306.0" layoutY="106.0" prefHeight="26.0" prefWidth="236.0" />
       <Button layoutX="66.0" layoutY="312.0" mnemonicParsing="false" onAction="#cadastrar_etapa1" prefHeight="26.0" prefWidth="124.0" text="Voltar" />
-      <DatePicker layoutX="64.0" layoutY="176.0" promptText="ex: 24/10/2003" />
-      <Label layoutX="66.0" layoutY="240.0" text="Brasil +55" />
+      <DatePicker fx:id="cad_data" layoutX="58.0" layoutY="159.0" promptText="ex: 24/10/2003" />
+      <Label layoutX="60.0" layoutY="226.0" text="Brasil +55" />
+      <Label fx:id="auxPnome" layoutX="185.0" layoutY="132.0" text="p nome" visible="false" />
+      <Label fx:id="auxLnome" layoutX="425.0" layoutY="132.0" text="p nome" visible="false" />
+      <Label fx:id="auxData" layoutX="126.0" layoutY="185.0" text="Primeiro nome" visible="false" />
+      <Label fx:id="auxTelefone" layoutX="214.0" layoutY="248.0" text="Primeiro nome" visible="false" />
    </children>
 </AnchorPane>

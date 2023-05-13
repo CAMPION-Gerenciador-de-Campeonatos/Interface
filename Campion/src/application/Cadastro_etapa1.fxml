@@ -10,41 +10,28 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
    <children>
-      <Label layoutX="66.0" layoutY="100.0" text="Usuário" />
-
-      <PasswordField fx:id="cad_senha" layoutX="67.0" layoutY="174.0" prefHeight="26.0" prefWidth="487.0" />
-      <TextField fx:id="cad_user" layoutX="66.0" layoutY="116.0" prefHeight="26.0" prefWidth="487.0" />
-      <Label fx:id="auxEmail" layoutX="65.0" layoutY="256.0" text="Email" visible="false">
-         <font>
-            <Font size="11.0" />
-         </font></Label>
-      <Label layoutX="250.0" layoutY="264.0" text="Passo 1 de 2" />
-      <Hyperlink contentDisplay="RIGHT" layoutX="232.0" layoutY="313.0" onAction="#login" prefHeight="24.0" prefWidth="95.0" text="Entrar" />
-      <Label layoutX="66.0" layoutY="317.0" text="Já é usuário da Campion?" />
-      <Label layoutX="186.0" layoutY="31.0" text="Junte-se hoje à Campion">
+      <Hyperlink contentDisplay="RIGHT" layoutX="356.0" layoutY="348.0" onAction="#login" prefHeight="24.0" prefWidth="41.0" text="Entrar" />
+      <Label layoutX="214.0" layoutY="347.0" prefHeight="26.0" prefWidth="142.0" text="Já é usuário da Campion?" />
+      <Label layoutX="193.0" layoutY="33.0" prefHeight="26.0" prefWidth="283.0" text="Junte-se hoje ao Campion">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
-      <ImageView fitHeight="96.0" fitWidth="76.0" layoutX="108.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="51.0" fitWidth="55.0" layoutX="142.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../Downloads/download.png" />
+            <Image url="@../../../../Downloads/logo2.png" />
          </image>
       </ImageView>
-      <Button fx:id="avancar_cad2" layoutX="430.0" layoutY="312.0" mnemonicParsing="false" onAction="#cadastrar_etapa2" prefHeight="26.0" prefWidth="124.0" text="Próxima etapa" />
-      <Label layoutX="66.0" layoutY="214.0" text="E-mail" />
-      <TextField fx:id="cad_email" layoutX="66.0" layoutY="230.0" prefHeight="26.0" prefWidth="487.0" />
-      <Label fx:id="auxUser" layoutX="66.0" layoutY="142.0" text="Usuário" textFill="#ff0e0e" visible="false">
-         <font>
-            <Font size="11.0" />
-         </font></Label>
-      <Label fx:id="auxSenha" layoutX="66.0" layoutY="200.0" text="Senha" textFill="#ff0e0e" visible="false">
-         <font>
-            <Font size="11.0" />
-         </font>
-      </Label>
-      <Label layoutX="66.0" layoutY="156.0" text="Senha" />
+      <Button layoutX="341.0" layoutY="270.0" mnemonicParsing="false" onAction="#login" prefHeight="26.0" prefWidth="124.0" text="Cadastrar-se" />
+      <Button layoutX="64.0" layoutY="270.0" mnemonicParsing="false" onAction="#selecionar_avatar" prefHeight="25.0" prefWidth="124.0" text="Selecionar avatar" />
+      <ImageView id="imageView" fx:id="avatar_imagem" fitHeight="148.0" fitWidth="135.0" layoutX="58.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="280.0" layoutY="104.0" prefHeight="6.0" prefWidth="51.0" text="Usuário" />
+      <PasswordField layoutX="279.0" layoutY="178.0" prefHeight="26.0" prefWidth="263.0" />
+      <TextField layoutX="285.0" layoutY="121.0" prefHeight="26.0" prefWidth="263.0" />
+      <Label layoutX="279.0" layoutY="216.0" text="E-mail" />
+      <TextField layoutX="279.0" layoutY="233.0" prefHeight="26.0" prefWidth="263.0" />
+      <Label layoutX="280.0" layoutY="161.0" text="Senha" />
    </children>
 </AnchorPane>

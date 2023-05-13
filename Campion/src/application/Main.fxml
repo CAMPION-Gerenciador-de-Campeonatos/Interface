@@ -10,24 +10,24 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="scenePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+<AnchorPane fx:id="scenePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
    <children>
-      <Label layoutX="219.0" layoutY="31.0" text="Entrar na Campion">
+      <Label layoutX="219.0" layoutY="31.0" text="Entrar no Campion">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
       <Label layoutX="56.0" layoutY="90.0" text="Usuário" />
       <PasswordField layoutX="57.0" layoutY="188.0" prefHeight="26.0" prefWidth="487.0" />
-      <TextField layoutX="56.0" layoutY="106.0" prefHeight="26.0" prefWidth="487.0" />
+      <TextField fx:id="user_id" layoutX="56.0" layoutY="106.0" prefHeight="26.0" prefWidth="487.0" />
       <Label layoutX="56.0" layoutY="172.0" text="Senha" />
       <Button fx:id="entrar_button" layoutX="56.0" layoutY="261.0" mnemonicParsing="false" onAction="#entrar" prefHeight="26.0" prefWidth="487.0" text="Entrar" />
-      <Hyperlink contentDisplay="RIGHT" layoutX="246.0" layoutY="303.0" onAction="#cadastrar_etapa1" prefHeight="24.0" prefWidth="95.0" text="Cadastrar-se" />
+      <Hyperlink contentDisplay="RIGHT" layoutX="216.0" layoutY="304.0" onAction="#cadastrar_etapa1" prefHeight="24.0" prefWidth="95.0" text="Cadastrar-se" />
       <Label layoutX="66.0" layoutY="100.0" />
       <Label layoutX="56.0" layoutY="307.0" text="Ainda não possui uma conta? " />
-      <ImageView fitHeight="96.0" fitWidth="76.0" layoutX="141.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="51.0" fitWidth="55.0" layoutX="165.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../Downloads/download.png" />
+            <Image url="@../../../../Downloads/logo2.png" />
          </image>
       </ImageView>
    </children>

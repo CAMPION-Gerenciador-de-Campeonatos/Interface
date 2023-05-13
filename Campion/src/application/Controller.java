@@ -22,7 +22,7 @@ public class Controller {
     @FXML 
     private TextField user_id;
     @FXML
-	private ImageView avatar_imagem;
+    private ImageView avatar_imagem;
     
     public void login(ActionEvent event) throws IOException {	
         root = FXMLLoader.load(getClass().getResource("Main.fxml"));

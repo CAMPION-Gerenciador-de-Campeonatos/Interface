@@ -22,11 +22,9 @@ public class Controller {
     @FXML 
     private TextField user_id;
     @FXML
-    private Label nome_id;
-    @FXML
 	private ImageView avatar_imagem;
     
-    public void login(ActionEvent event) throws IOException {
+    public void login(ActionEvent event) throws IOException {	
         root = FXMLLoader.load(getClass().getResource("Main.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
@@ -45,13 +43,21 @@ public class Controller {
     }
 
     public void entrar(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("Campion1.fxml"));
+    	String username = user_id.getText();
+    	
+    	FXMLLoader	loader = new FXMLLoader(getClass().getResource("Campion1.fxml"));
+    	root = loader.load();
+    	ControllerCampion1 controladorCampion1 = loader.getController();
+    	controladorCampion1.mostrarNome(username);
+    	
+    	//root = FXMLLoader.load(getClass().getResource("Campion1.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         StyleUtil.applyStyle(scene);
         stage.setScene(scene);
         stage.show();
 
+        
     }
     
     public void selecionar_avatar(ActionEvent event) {

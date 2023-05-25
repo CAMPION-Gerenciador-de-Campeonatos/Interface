@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <children>
+      <Hyperlink alignment="CENTER" contentDisplay="RIGHT" layoutX="206.0" layoutY="330.0" onAction="#login" prefHeight="24.0" prefWidth="51.0" text="Entrar" AnchorPane.bottomAnchor="46.0" />
+      <Label alignment="CENTER" layoutX="57.0" layoutY="329.0" prefHeight="26.0" prefWidth="135.0" text="Já é usuário da Campion?" AnchorPane.bottomAnchor="45.0" AnchorPane.leftAnchor="57.0" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="169.0" layoutY="14.0" nodeOrientation="INHERIT" prefHeight="35.0" prefWidth="289.0" text="Junte-se hoje ao Campion">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button layoutX="341.0" layoutY="270.0" mnemonicParsing="false" onAction="#login" prefHeight="26.0" prefWidth="124.0" text="Cadastrar-se" />
+      <Button layoutX="64.0" layoutY="270.0" mnemonicParsing="false" onAction="#selecionar_avatar" prefHeight="25.0" prefWidth="124.0" text="Selecionar avatar" AnchorPane.leftAnchor="62.0" />
+      <ImageView id="imageView" fx:id="avatar_imagem" fitHeight="148.0" fitWidth="135.0" layoutX="57.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="280.0" layoutY="104.0" prefHeight="6.0" prefWidth="51.0" text="Usuário" />
+      <PasswordField layoutX="279.0" layoutY="178.0" prefHeight="26.0" prefWidth="263.0" AnchorPane.leftAnchor="279.0" />
+      <TextField layoutX="279.0" layoutY="121.0" prefHeight="26.0" prefWidth="263.0" AnchorPane.leftAnchor="279.0" />
+      <Label layoutX="279.0" layoutY="216.0" text="E-mail" />
+      <TextField layoutX="279.0" layoutY="233.0" prefHeight="26.0" prefWidth="263.0" AnchorPane.leftAnchor="279.0" />
+      <Label layoutX="280.0" layoutY="161.0" text="Senha" />
+   </children>
+</AnchorPane>

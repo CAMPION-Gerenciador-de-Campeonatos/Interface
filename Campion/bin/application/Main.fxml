@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="scenePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
    <children>
       <Label layoutX="219.0" layoutY="31.0" text="Entrar no Campion">
          <font>
@@ -21,7 +21,7 @@
       <PasswordField layoutX="57.0" layoutY="188.0" prefHeight="26.0" prefWidth="487.0" />
       <TextField fx:id="user_id" layoutX="56.0" layoutY="106.0" onAction="#cadastrar_etapa1" prefHeight="26.0" prefWidth="487.0" />
       <Label layoutX="56.0" layoutY="172.0" text="Senha" />
-      <Button fx:id="entrar_button" layoutX="56.0" layoutY="261.0" mnemonicParsing="false" onAction="#entrar" prefHeight="26.0" prefWidth="487.0" text="Entrar" />
+      <Button layoutX="56.0" layoutY="261.0" mnemonicParsing="false" onAction="#entrar" prefHeight="26.0" prefWidth="487.0" text="Entrar" />
       <Hyperlink contentDisplay="RIGHT" layoutX="260.0" layoutY="303.0" onAction="#cadastrar_etapa1" prefHeight="24.0" prefWidth="95.0" text="Cadastrar-se" />
       <Label layoutX="66.0" layoutY="100.0" />
       <Label layoutX="56.0" layoutY="307.0" text="Ainda não possui uma conta? " />

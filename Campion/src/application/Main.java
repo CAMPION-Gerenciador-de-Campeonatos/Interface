@@ -2,6 +2,7 @@ package application;
 	
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -17,8 +18,10 @@ public class Main extends Application {
 			Scene scene = new Scene(root);
 	        StyleUtil.applyStyle(scene);
 			stage.setScene(scene);
+			stage.setResizable(false);
 			stage.show();
-			
+	        StageUtil.centerStage(stage);
+
 			stage.setOnCloseRequest(event -> {
 				event.consume();
 				sair(stage);
@@ -27,8 +30,7 @@ public class Main extends Application {
 			e.printStackTrace();
 		}
 	}
-	
-    public void sair(Stage stage) {
+	public void sair(Stage stage) {
     	Alert aviso = new Alert(AlertType.CONFIRMATION);
     	aviso.setTitle("Champion");
     	aviso.setHeaderText("Deseja finalizar seu processo?");

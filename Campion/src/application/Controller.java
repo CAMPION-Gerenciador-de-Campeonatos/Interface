@@ -7,11 +7,11 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.FileChooser;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
 
 public class Controller {
@@ -22,7 +22,7 @@ public class Controller {
     @FXML 
     private TextField user_id;
     @FXML
-    private ImageView avatar_imagem;
+	private ImageView avatar_imagem;
     
     public void login(ActionEvent event) throws IOException {	
         root = FXMLLoader.load(getClass().getResource("Main.fxml"));
@@ -30,22 +30,22 @@ public class Controller {
         scene = new Scene(root);
         StyleUtil.applyStyle(scene);
         stage.setScene(scene);
+        StageUtil.centerStage(stage);
         stage.show();
     }
-    
     public void cadastrar_etapa1(ActionEvent event) throws IOException {    	
         root = FXMLLoader.load(getClass().getResource("Cadastro_etapa1.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         StyleUtil.applyStyle(scene);
         stage.setScene(scene);
+        StageUtil.centerStage(stage);
         stage.show();
     }
-
     public void entrar(ActionEvent event) throws IOException {
     	String username = user_id.getText();
     	
-    	FXMLLoader	loader = new FXMLLoader(getClass().getResource("Campion1.fxml"));
+    	FXMLLoader loader = new FXMLLoader(getClass().getResource("Campion1.fxml"));
     	root = loader.load();
     	ControllerCampion1 controladorCampion1 = loader.getController();
     	controladorCampion1.mostrarNome(username);
@@ -55,9 +55,8 @@ public class Controller {
         scene = new Scene(root);
         StyleUtil.applyStyle(scene);
         stage.setScene(scene);
-        stage.show();
-
-        
+        StageUtil.centerStage(stage);
+        stage.show();    
     }
     
     public void selecionar_avatar(ActionEvent event) {
@@ -73,7 +72,6 @@ public class Controller {
     	}
     }
 }
-
 class StyleUtil {
     public static void applyStyle(Scene scene) {
         String css = StyleUtil.class.getResource("application.css").toExternalForm();

@@ -9,6 +9,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
 
 public class ControllerCampion1 {
@@ -21,7 +22,7 @@ public class ControllerCampion1 {
     private Parent root;
     
     public void mostrarNome(String username) {
-    	nome_id.setText("Olá "+username+" seja bem-vindo ao Campion");
+    	nome_id.setText("Olá "+username);
     }
     
     public void logout(ActionEvent event) throws IOException {	
@@ -31,6 +32,7 @@ public class ControllerCampion1 {
         scene = new Scene(root);
         StyleUtil.applyStyle(scene);
         stage.setScene(scene);
+        StageUtil.centerStage(stage);
         stage.show();
     }
 }

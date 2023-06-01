@@ -1,63 +1,6 @@
-/* styles.css */
-
-/* Estilo para o background do AnchorPane */
-.anchor-pane {
-    -fx-background-color: #000000; /* Cor de fundo preta */
+.root {
+    -fx-background-image: url('wallhaven-gj8wdq_3840x3072.png');
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
 }
 
-/* Estilo para o Label "Entrar no Campion" */
-.label-title {
-    -fx-font-size: 24px; /* Tamanho da fonte */
-    -fx-text-fill: #FFD700; /* Cor do texto em dourado */
-}
-
-/* Estilo para os Labels "Usuário" e "Senha" */
-.label {
-    -fx-text-fill: #000000; /* Cor do texto em branco */
-}
-
-/* Estilo para os campos de texto TextField e PasswordField */
-.text-field, .password-field {
-    -fx-background-color: #FFFFFF; /* Cor de fundo branco */
-    -fx-border-color: #FFD700; /* Cor da borda em dourado */
-}
-
-/* Estilo para o botão "Entrar" */
-.button {
-    -fx-background-color: #FFD700; /* Cor de fundo em dourado */
-    -fx-text-fill: #000000; /* Cor do texto em preto */
-}
-
-/* Estilo para o Hyperlink "Cadastrar-se" */
-.hyperlink {
-    -fx-text-fill: #FFD700; /* Cor do texto em dourado */
-}
-
-/* Estilo para a imagem do logo */
-.image-view {
-    -fx-background-color: transparent; /* Cor de fundo transparente */
-}
-
-/* Aplicando o estilo aos elementos específicos do FXML */
-#title {
-    -fx-font-size: 24px; /* Tamanho da fonte */
-    -fx-text-fill: #FFD700; /* Cor do texto em dourado */
-}
-
-#userLabel, #passwordLabel {
-    -fx-text-fill: #FFFFFF; /* Cor do texto em branco */
-}
-
-#user_id, #passwordField {
-    -fx-background-color: #FFFFFF; /* Cor de fundo branco */
-    -fx-border-color: #FFD700; /* Cor da borda em dourado */
-}
-
-#loginButton {
-    -fx-background-color: #FFD700; /* Cor de fundo em dourado */
-    -fx-text-fill: #000000; /* Cor do texto em preto */
-}
-
-#registerLink {
-    -fx-text-fill: #FFD700; /* Cor do texto em dourado */
-}

@@ -11,14 +11,13 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.control.Alert.AlertType;
 
 public class Main extends Application {
-	@Override
+	
 	public void start(Stage stage) {
 		try {
-			Parent root = FXMLLoader.load(getClass().getResource("Main.fxml"));
+			Parent root = FXMLLoader.load(getClass().getResource("login_cadastro.fxml"));
 			Scene scene = new Scene(root);
 	        StyleUtil.applyStyle(scene);
 			stage.setScene(scene);
-			stage.setResizable(false);
 			stage.show();
 	        StageUtil.centerStage(stage);
 			stage.setOnCloseRequest(event -> {

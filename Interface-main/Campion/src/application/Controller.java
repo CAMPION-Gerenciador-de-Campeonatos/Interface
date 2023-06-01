@@ -7,6 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.MenuButton;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -19,38 +20,20 @@ public class Controller {
     private Scene scene;
     private Parent root;
     
+    @FXML
+    private MenuButton menuButton;
+    @FXML
+    private MenuButton menuButton2;
     @FXML 
     private TextField user_id;
     @FXML
 	private ImageView avatar_imagem;
-    
-    public void login(ActionEvent event) throws IOException {	
-        root = FXMLLoader.load(getClass().getResource("Main.fxml"));
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        StyleUtil.applyStyle(scene);
-        stage.setScene(scene);
-        StageUtil.centerStage(stage);
-        stage.show();
-    }
-    public void cadastrar_etapa1(ActionEvent event) throws IOException {    	
-        root = FXMLLoader.load(getClass().getResource("Cadastro_etapa1.fxml"));
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        StyleUtil.applyStyle(scene);
-        stage.setScene(scene);
-        StageUtil.centerStage(stage);
-        stage.show();
-    }
+
     public void entrar(ActionEvent event) throws IOException {
-    	String username = user_id.getText();
     	
-    	FXMLLoader loader = new FXMLLoader(getClass().getResource("Campion1.fxml"));
+    	FXMLLoader loader = new FXMLLoader(getClass().getResource("meus_campeonatos.fxml"));
     	root = loader.load();
-    	ControllerCampion1 controladorCampion1 = loader.getController();
-    	controladorCampion1.mostrarNome(username);
     	
-    	//root = FXMLLoader.load(getClass().getResource("Campion1.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         StyleUtil.applyStyle(scene);
@@ -58,6 +41,7 @@ public class Controller {
         StageUtil.centerStage(stage);
         stage.show();    
     }
+    
     
     public void selecionar_avatar(ActionEvent event) {
     	FileChooser fileChooser = new FileChooser();
@@ -70,6 +54,67 @@ public class Controller {
     	    Image image = new Image(selectedFile.toURI().toString());
     	    avatar_imagem.setImage(image);
     	}
+    }
+    
+    public void logout(ActionEvent event ) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("login_cadastro.fxml"));
+        Stage stage = (Stage) menuButton.getScene().getWindow();
+        scene = new Scene(root);
+        StyleUtil.applyStyle(scene);
+        stage.setScene(scene);
+        StageUtil.centerStage(stage);
+        stage.show();    
+     }
+    
+    public void criar_time(ActionEvent event ) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("criar_time.fxml"));
+        Stage stage = (Stage) menuButton.getScene().getWindow();
+        scene = new Scene(root);
+        StyleUtil.applyStyle(scene);
+        stage.setScene(scene);
+        StageUtil.centerStage(stage);
+        stage.show();    
+     }
+    
+    public void meus_times(ActionEvent event ) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("meus_times.fxml"));
+        Stage stage = (Stage) menuButton.getScene().getWindow();
+        scene = new Scene(root);
+        StyleUtil.applyStyle(scene);
+        stage.setScene(scene);
+        StageUtil.centerStage(stage);
+        stage.show();    
+     }
+    
+    public void criar_campeonato(ActionEvent event ) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("criar_campeonato1.fxml"));
+        Stage stage = (Stage) menuButton.getScene().getWindow();
+        scene = new Scene(root);
+        StyleUtil.applyStyle(scene);
+        stage.setScene(scene);
+        StageUtil.centerStage(stage);
+        stage.show();    
+     }
+    
+    public void meus_campeonatos(ActionEvent event ) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("meus_campeonatos.fxml"));
+        Stage stage = (Stage) menuButton.getScene().getWindow();
+        scene = new Scene(root);
+        StyleUtil.applyStyle(scene);
+        stage.setScene(scene);
+        StageUtil.centerStage(stage);
+        stage.show();    
+     }
+    
+    public void ir_para_campeonato(ActionEvent event) throws IOException {
+    	FXMLLoader	loader = new FXMLLoader(getClass().getResource("criar_campeonato2.fxml"));
+    	root = loader.load();        
+    	stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        StyleUtil.applyStyle(scene);
+        stage.setScene(scene);
+        StageUtil.centerStage(stage);
+        stage.show();
     }
 }
 class StyleUtil {

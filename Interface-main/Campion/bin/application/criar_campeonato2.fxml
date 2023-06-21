@@ -8,7 +8,6 @@
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
@@ -225,25 +224,14 @@
          </VBox>
       </children>
    </HBox>
-   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
-      <children>
-         <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
-            <HBox.margin>
-               <Insets />
-            </HBox.margin>
-            <image>
-               <Image url="@logo2%20(1)%20(1).png" />
-            </image>
-         </ImageView>
-      </children>
-   </HBox>
-   <VBox prefHeight="528.0" prefWidth="648.0" style="-fx-background-color: #EEB422; -fx-background-radius: 10 10 10 10;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" />
+   <VBox prefHeight="528.0" prefWidth="648.0" style="-fx-background-color: rgba(238, 233, 191, 0.5); -fx-background-radius: 10 10 10 10;" GridPane.columnIndex="1" GridPane.rowIndex="1">
       <children>
          <HBox prefHeight="387.0" prefWidth="531.0">
             <children>
                <VBox prefHeight="387.0" prefWidth="172.0" HBox.hgrow="ALWAYS">
                   <children>
-                     <ImageView id="logo_camp" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 1;" styleClass="logo_camp">
+                     <ImageView id="logo_camp" fx:id="imagem_criarCamp" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 1;" styleClass="logo_camp">
                         <VBox.margin>
                            <Insets left="40.0" top="30.0" />
                         </VBox.margin>
@@ -262,8 +250,8 @@
                   <children>
                      <MenuButton mnemonicParsing="false" text="Status" wrapText="true">
                        <items>
-                         <MenuItem mnemonicParsing="false" text="Action 1" />
-                         <MenuItem mnemonicParsing="false" text="Action 2" />
+                         <MenuItem fx:id="andamento_Status" mnemonicParsing="false" text="Em andamento" />
+                         <MenuItem fx:id="encerrado_Status" mnemonicParsing="false" text="Encerrado" />
                        </items>
                         <VBox.margin>
                            <Insets left="20.0" top="45.0" />
@@ -277,7 +265,7 @@
                            <Insets left="20.0" top="5.0" />
                         </VBox.margin>
                      </Label>
-                     <TextArea prefHeight="42.0" prefWidth="135.0" promptText="Descrição">
+                     <TextArea fx:id="descricao_Camp" prefHeight="42.0" prefWidth="135.0" promptText="Descrição">
                         <VBox.margin>
                            <Insets left="20.0" right="40.0" />
                         </VBox.margin>
@@ -294,7 +282,7 @@
                            <Insets top="30.0" />
                         </VBox.margin>
                      </Label>
-                     <TextField promptText="Data de início">
+                     <TextField fx:id="data_inicio" promptText="Data de início">
                         <VBox.margin>
                            <Insets right="40.0" />
                         </VBox.margin>
@@ -304,7 +292,7 @@
                            <Insets top="20.0" />
                         </VBox.margin>
                      </Label>
-                     <TextField promptText="Data de término">
+                     <TextField fx:id="data_termino" promptText="Data de término">
                         <VBox.margin>
                            <Insets right="40.0" />
                         </VBox.margin>

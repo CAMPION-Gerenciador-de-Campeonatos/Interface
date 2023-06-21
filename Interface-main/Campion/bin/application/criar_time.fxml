@@ -9,7 +9,6 @@
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
@@ -73,21 +72,10 @@
          </VBox>
       </children>
    </HBox>
-   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
-      <children>
-         <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
-            <HBox.margin>
-               <Insets />
-            </HBox.margin>
-            <image>
-               <Image url="@logo2%20(1)%20(1).png" />
-            </image>
-         </ImageView>
-      </children>
-   </HBox>
+   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" />
    <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: rgba(238, 233, 191, 0.5); -fx-background-radius: 10 0 0 10;" GridPane.rowIndex="1">
       <children>
-         <ImageView fitHeight="214.0" fitWidth="173.0" pickOnBounds="true" preserveRatio="true">
+         <ImageView fx:id="imagem_time" fitHeight="214.0" fitWidth="173.0" pickOnBounds="true" preserveRatio="true">
             <VBox.margin>
                <Insets left="40.0" top="76.0" />
             </VBox.margin>
@@ -126,7 +114,7 @@
                <Insets top="10.0" />
             </VBox.margin>
          </Label>
-         <TextField />
+         <TextField fx:id="nome_criarTime" />
          <Label text="Descrição:">
             <font>
                <Font name="SansSerif Regular" size="12.0" />
@@ -135,7 +123,7 @@
                <Insets top="10.0" />
             </VBox.margin>
          </Label>
-         <TextArea prefHeight="71.0" prefWidth="600.0" />
+         <TextArea fx:id="descricao_time" prefHeight="71.0" prefWidth="600.0" />
          <Label text="Preencha os campos abaixo para concluir as informações básicas do Time:">
             <font>
                <Font name="SansSerif Regular" size="12.0" />
@@ -161,7 +149,7 @@
                            <Font name="SansSerif Regular" size="12.0" />
                         </font>
                      </Label>
-                     <TextField />
+                     <TextField fx:id="abreviacao_time" />
                      <Button mnemonicParsing="false" text="SALVAR">
                         <VBox.margin>
                            <Insets top="20.0" />
@@ -187,7 +175,7 @@
                            <Font name="SansSerif Regular" size="12.0" />
                         </font>
                      </Label>
-                     <TextField />
+                     <TextField fx:id="rival_time" />
                   </children>
                   <HBox.margin>
                      <Insets bottom="237.0" />
@@ -208,7 +196,7 @@
                            <Font name="SansSerif Regular" size="12.0" />
                         </font>
                      </Label>
-                     <TextField prefHeight="25.0" prefWidth="150.0" />
+                     <TextField fx:id="casa_time" prefHeight="25.0" prefWidth="150.0" />
                   </children>
                   <HBox.margin>
                      <Insets bottom="237.0" />
@@ -233,7 +221,7 @@
          </Label>
          <HBox prefHeight="29.0" prefWidth="359.0">
             <children>
-               <TextField prefHeight="25.0" prefWidth="252.0">
+               <TextField fx:id="nome_jogadores" prefHeight="25.0" prefWidth="252.0">
                   <HBox.margin>
                      <Insets top="24.0" />
                   </HBox.margin>
@@ -251,7 +239,7 @@
                <Insets left="10.0" />
             </VBox.margin>
          </HBox>
-         <ListView prefHeight="229.0" prefWidth="340.0">
+         <ListView fx:id="lista_jogadores" prefHeight="229.0" prefWidth="340.0">
             <VBox.margin>
                <Insets left="10.0" right="10.0" top="25.0" />
             </VBox.margin>

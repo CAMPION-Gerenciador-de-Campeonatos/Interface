@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<GridPane minHeight="0.0" prefHeight="670.0" prefWidth="1200.0" style="-fx-background-color: #FFC125;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <columnConstraints>
+      <ColumnConstraints halignment="RIGHT" percentWidth="50.0" prefWidth="400.0" />
+      <ColumnConstraints percentWidth="50.0" prefWidth="400.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints maxHeight="330.0" minHeight="64.0" percentHeight="15.0" prefHeight="117.0" />
+      <RowConstraints maxHeight="606.0" minHeight="340.0" percentHeight="85.0" prefHeight="553.0" />
+   </rowConstraints>
+   <children>
+      <VBox alignment="TOP_CENTER" prefHeight="539.0" prefWidth="600.0" style="-fx-background-color: rgba(238, 233, 191, 0.5); -fx-background-radius: 10 10 10 10;" GridPane.rowIndex="1">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" text="Login">
+               <font>
+                  <Font name="SansSerif Bold" size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="60.0" />
+               </VBox.margin>
+            </Label>
+            <Label prefHeight="21.0" prefWidth="331.0" text="Entrar com seu nome de usuário e senha">
+               <VBox.margin>
+                  <Insets top="40.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="SansSerif Regular" size="18.0" />
+               </font>
+            </Label>
+            <Label text="Email">
+               <VBox.margin>
+                  <Insets right="290.0" top="40.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="email_login_id" maxHeight="25.0" maxWidth="330.0" prefHeight="25.0" prefWidth="299.0">
+               <VBox.margin>
+                  <Insets left="105.0" right="105.0" />
+               </VBox.margin>
+            </TextField>
+            <Label text="Senha">
+               <VBox.margin>
+                  <Insets left="5.0" right="300.0" top="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="senha_login_id" maxHeight="25.0" maxWidth="330.0" prefWidth="331.0">
+               <VBox.margin>
+                  <Insets left="105.0" right="105.0" />
+               </VBox.margin>
+            </PasswordField>
+            <Button mnemonicParsing="false" onAction="#entrar" text="Entrar">
+               <VBox.margin>
+                  <Insets top="66.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="SansSerif Bold" size="12.0" />
+               </font>
+            </Button>
+            <Label fx:id="usuario_logado" prefHeight="49.0" prefWidth="88.0" text="Label">
+               <padding>
+                  <Insets top="30.0" />
+               </padding>
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+         </children>
+         <GridPane.margin>
+            <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+         </GridPane.margin>
+      </VBox>
+      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: rgba(238, 233, 191, 0.5); -fx-background-radius: 10 10 10 10;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <children>
+            <Label text="Cadastro">
+               <font>
+                  <Font name="SansSerif Bold" size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="60.0" />
+               </VBox.margin>
+            </Label>
+            <Label text="Junte-se hoje ao Campion">
+               <font>
+                  <Font name="SansSerif Regular" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="40.0" />
+               </VBox.margin>
+            </Label>
+            <HBox prefHeight="549.0" prefWidth="600.0">
+               <children>
+                  <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <ImageView fx:id="avatar_cad_id" fitHeight="153.0" fitWidth="135.0" pickOnBounds="true" preserveRatio="true">
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </ImageView>
+                        <Button mnemonicParsing="false" onAction="#selecionar_avatar" prefHeight="25.0" prefWidth="106.0" text="Selecionar avatar">
+                           <VBox.margin>
+                              <Insets top="33.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label text="Usuário">
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </Label>
+                        <TextField fx:id="user_cad_id">
+                           <VBox.margin>
+                              <Insets right="60.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <Label text="Senha">
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </Label>
+                        <PasswordField fx:id="senha_cad_id">
+                           <VBox.margin>
+                              <Insets right="60.0" />
+                           </VBox.margin>
+                        </PasswordField>
+                        <Label text="Email">
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </Label>
+                        <TextField fx:id="email_cad_id">
+                           <VBox.margin>
+                              <Insets right="60.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <Button mnemonicParsing="false" text="Cadastrar-se">
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+         <GridPane.margin>
+            <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+         </GridPane.margin>
+      </VBox>
+      <Label prefHeight="27.0" prefWidth="155.0" text="ao Campion!" GridPane.columnIndex="1">
+         <font>
+            <Font name="SansSerif Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label alignment="TOP_CENTER" contentDisplay="RIGHT" prefHeight="27.0" prefWidth="130.0" text="Bem vindo ">
+         <font>
+            <Font name="SansSerif Bold" size="24.0" />
+         </font>
+      </Label>
+   </children>
+</GridPane>

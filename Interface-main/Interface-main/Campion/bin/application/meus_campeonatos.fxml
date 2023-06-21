@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<GridPane minHeight="0.0" prefHeight="670.0" prefWidth="1200.0" style="-fx-background-color: #FFC125;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+	<VBox alignment="TOP_RIGHT" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2">
+		<children>
+			<ImageView fitHeight="50.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+				<VBox.margin>
+					<Insets right="10.0" top="10.0" />
+				</VBox.margin>
+			</ImageView>
+			<MenuButton fx:id="menuButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="76.0" text="Perfil">
+				<items>
+					<MenuItem mnemonicParsing="false" text="Editar" />
+					<MenuItem mnemonicParsing="false" onAction="#logout" text="Sair" />
+				</items>
+				<padding>
+					<Insets right="10.0" />
+				</padding>
+				<VBox.margin>
+					<Insets right="10.0" />
+				</VBox.margin>
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font>
+			</MenuButton>
+		</children>
+	</VBox>
+	<HBox prefHeight="251.0" prefWidth="336.0" style="-fx-background-color: #EEB422; -fx-background-radius: 10px;" visible="false" GridPane.rowIndex="2">
+		<children>
+			<ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+				<HBox.margin>
+					<Insets left="20.0" top="20.0" />
+				</HBox.margin>
+			</ImageView>
+			<VBox prefHeight="469.0" prefWidth="147.0">
+				<children>
+					<Label text="Nome:">
+						<VBox.margin>
+							<Insets left="20.0" top="20.0" />
+						</VBox.margin>
+					</Label>
+					<Label text="Tipo:">
+						<VBox.margin>
+							<Insets left="20.0" top="10.0" />
+						</VBox.margin>
+					</Label>
+					<Label prefWidth="66.0" text="Modalidade:">
+						<VBox.margin>
+							<Insets left="20.0" top="10.0" />
+						</VBox.margin>
+					</Label>
+					<Label text="Participantes:">
+						<VBox.margin>
+							<Insets left="20.0" top="10.0" />
+						</VBox.margin>
+					</Label>
+					<Label text="Andamento:">
+						<VBox.margin>
+							<Insets left="20.0" top="10.0" />
+						</VBox.margin>
+					</Label>
+					<Label text="VER CAMPEONATO">
+						<VBox.margin>
+							<Insets left="20.0" top="50.0" />
+						</VBox.margin>
+					</Label>
+					<Label text="EDITAR CAMPEONATO">
+						<padding>
+							<Insets bottom="20.0" left="20.0" top="5.0" />
+						</padding>
+					</Label>
+				</children>
+			</VBox>
+		</children>
+		<GridPane.margin>
+			<Insets bottom="180.0" left="20.0" right="40.0" top="40.0" />
+		</GridPane.margin>
+	</HBox>
+	<HBox prefHeight="251.0" prefWidth="336.0" style="-fx-background-color: #EEB422; -fx-background-radius: 10px;" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="2">
+		<children>
+			<ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" visible="false">
+				<HBox.margin>
+					<Insets left="20.0" top="20.0" />
+				</HBox.margin>
+			</ImageView>
+			<VBox prefHeight="469.0" prefWidth="147.0">
+				<children>
+					<Label text="Nome:">
+						<VBox.margin>
+							<Insets left="20.0" top="20.0" />
+						</VBox.margin>
+					</Label>
+					<Label text="Tipo:">
+						<VBox.margin>
+							<Insets left="20.0" top="10.0" />
+						</VBox.margin>
+					</Label>
+					<Label prefWidth="66.0" text="Modalidade:">
+						<VBox.margin>
+							<Insets left="20.0" top="10.0" />
+						</VBox.margin>
+					</Label>
+					<Label text="Participantes:">
+						<VBox.margin>
+							<Insets left="20.0" top="10.0" />
+						</VBox.margin>
+					</Label>
+					<Label text="Andamento:">
+						<VBox.margin>
+							<Insets left="20.0" top="10.0" />
+						</VBox.margin>
+					</Label>
+					<Label text="VER CAMPEONATO">
+						<VBox.margin>
+							<Insets left="20.0" top="50.0" />
+						</VBox.margin>
+					</Label>
+					<Label text="EDITAR CAMPEONATO">
+						<padding>
+							<Insets bottom="20.0" left="20.0" top="5.0" />
+						</padding>
+					</Label>
+				</children>
+			</VBox>
+		</children>
+		<GridPane.margin>
+			<Insets bottom="180.0" left="20.0" right="40.0" top="40.0" />
+		</GridPane.margin>
+	</HBox>
+	<HBox prefHeight="251.0" prefWidth="336.0" style="-fx-background-color: #EEB422; -fx-background-radius: 10px;" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="2">
+		<children>
+			<ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+				<HBox.margin>
+					<Insets left="20.0" top="20.0" />
+				</HBox.margin>
+			</ImageView>
+			<VBox prefHeight="469.0" prefWidth="147.0">
+				<children>
+					<Label text="Nome:">
+						<VBox.margin>
+							<Insets left="20.0" top="20.0" />
+						</VBox.margin>
+					</Label>
+					<Label text="Tipo:">
+						<VBox.margin>
+							<Insets left="20.0" top="10.0" />
+						</VBox.margin>
+					</Label>
+					<Label prefWidth="66.0" text="Modalidade:">
+						<VBox.margin>
+							<Insets left="20.0" top="10.0" />
+						</VBox.margin>
+					</Label>
+					<Label text="Participantes:">
+						<VBox.margin>
+							<Insets left="20.0" top="10.0" />
+						</VBox.margin>
+					</Label>
+					<Label text="Andamento:">
+						<VBox.margin>
+							<Insets left="20.0" top="10.0" />
+						</VBox.margin>
+					</Label>
+					<Label text="VER CAMPEONATO">
+						<VBox.margin>
+							<Insets left="20.0" top="50.0" />
+						</VBox.margin>
+					</Label>
+					<Label text="EDITAR CAMPEONATO">
+						<padding>
+							<Insets bottom="20.0" left="20.0" top="5.0" />
+						</padding>
+					</Label>
+				</children>
+			</VBox>
+		</children>
+		<GridPane.margin>
+			<Insets bottom="180.0" left="20.0" right="40.0" top="40.0" />
+		</GridPane.margin>
+	</HBox>
+	<HBox prefHeight="100.0" prefWidth="200.0">
+		<children>
+			<VBox prefHeight="200.0" prefWidth="100.0">
+				<children>
+					<MenuButton fx:id="menuButton2" mnemonicParsing="false" text="Menu">
+						<VBox.margin>
+							<Insets left="20.0" top="37.0" />
+						</VBox.margin>
+						<items>
+							<Menu mnemonicParsing="false" text="Times">
+								<items>
+									<MenuItem mnemonicParsing="false" onAction="#criar_time" text="Criar time" />
+									<MenuItem mnemonicParsing="false" onAction="#meus_times" text="Times" />
+								</items>
+							</Menu>
+							<Menu mnemonicParsing="false" text="Campeonatos">
+								<items>
+									<MenuItem mnemonicParsing="false" onAction="#criar_campeonato" text="Criar campeonato" />
+									<MenuItem mnemonicParsing="false" onAction="#meus_campeonatos" text="Meus campeonatos" />
+								</items>
+							</Menu>
+						</items>
+                  <font>
+                     <Font name="System Bold" size="12.0" />
+                  </font>
+					</MenuButton>
+				</children>
+			</VBox>
+		</children>
+	</HBox>
+	<HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" />
+	<VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: rgba(238, 233, 191, 0.5); -fx-background-radius: 10 0 0 10;" GridPane.rowIndex="1">
+		<children>
+			<Label text="FILTRAR POR:">
+				<font>
+					<Font name="System Bold" size="14.0" />
+				</font>
+				<VBox.margin>
+					<Insets left="20.0" top="10.0" />
+				</VBox.margin>
+			</Label>
+			<Label text="Nome:">
+				<VBox.margin>
+					<Insets left="20.0" />
+				</VBox.margin>
+			</Label>
+			<TextField fx:id="nome_buscarCamp_id" prefHeight="25.0" prefWidth="300.0">
+				<VBox.margin>
+					<Insets left="20.0" right="80.0" />
+				</VBox.margin>
+			</TextField>
+		</children>
+		<GridPane.margin>
+			<Insets left="20.0" />
+		</GridPane.margin>
+	</VBox>
+	<VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: rgba(238, 233, 191, 0.5);" GridPane.columnIndex="1" GridPane.rowIndex="1">
+		<children>
+			<Label text="Status:">
+				<VBox.margin>
+					<Insets left="20.0" top="30.0" />
+				</VBox.margin>
+			</Label>
+			<TextField fx:id="status_buscarCamp_id" prefHeight="25.0" prefWidth="300.0">
+				<VBox.margin>
+					<Insets left="20.0" right="80.0" />
+				</VBox.margin>
+			</TextField>
+		</children>
+		<GridPane.margin>
+			<Insets />
+		</GridPane.margin>
+	</VBox>
+	<HBox prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: rgba(238, 233, 191, 0.5); -fx-background-radius: 0 10 10 0;" GridPane.columnIndex="2" GridPane.rowIndex="1">
+		<children>
+			<VBox prefHeight="100.0" prefWidth="308.0">
+				<children>
+					<Label text="Modalidade:">
+						<VBox.margin>
+							<Insets top="30.0" />
+						</VBox.margin>
+					</Label>
+					<TextField fx:id="modalidade_buscarCamp_id" prefHeight="25.0" prefWidth="300.0">
+						<VBox.margin>
+							<Insets right="20.0" />
+						</VBox.margin>
+					</TextField>
+				</children>
+				<HBox.margin>
+					<Insets left="20.0" />
+				</HBox.margin>
+			</VBox>
+			<Button mnemonicParsing="false" prefHeight="25.0" prefWidth="74.0" text="Filtrar">
+				<HBox.margin>
+					<Insets right="20.0" top="48.0" />
+				</HBox.margin>
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font>
+			</Button>
+		</children>
+		<GridPane.margin>
+			<Insets right="20.0" />
+		</GridPane.margin>
+	</HBox>
+	<VBox alignment="TOP_CENTER" prefHeight="18.0" prefWidth="408.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+		<GridPane.margin>
+			<Insets bottom="430.0" />
+		</GridPane.margin>
+		<children>
+			<Label text="Nenhum campeonato criado">
+				<VBox.margin>
+					<Insets left="20.0" top="10.0" />
+				</VBox.margin>
+			</Label>
+		</children>
+	</VBox>
+	<columnConstraints>
+		<ColumnConstraints percentWidth="33.0" prefWidth="400.0" />
+		<ColumnConstraints percentWidth="34.0" />
+		<ColumnConstraints percentWidth="33.0" prefWidth="400.0" />
+	</columnConstraints>
+	<rowConstraints>
+		<RowConstraints maxHeight="330.0" minHeight="64.0" percentHeight="15.0" prefHeight="117.0" />
+		<RowConstraints maxHeight="330.0" minHeight="64.0" percentHeight="15.0" prefHeight="117.0" />
+		<RowConstraints maxHeight="606.0" minHeight="340.0" percentHeight="70.0" prefHeight="553.0" />
+	</rowConstraints>
+
+</GridPane>
